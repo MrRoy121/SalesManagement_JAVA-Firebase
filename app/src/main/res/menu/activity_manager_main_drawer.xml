@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_dashboard_black_24dp"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/my_account"
+            android:icon="@mipmap/myaccount"
+            android:title="My Account" />
+        <item
+            android:id="@+id/my_team"
+            android:icon="@mipmap/myteam"
+            android:title="My Team" />
+        <item
+            android:id="@+id/statistics"
+            android:icon="@mipmap/stats"
+            android:title="Stats" />
+        <item
+            android:id="@+id/chat_room"
+            android:icon="@drawable/ic_message"
+            android:title="Chat Room" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share app" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send invite" />
+        </menu>
+    </item>
+
+</menu>
