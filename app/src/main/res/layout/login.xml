@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:paddingLeft="45dp"
+    android:paddingRight="45dp"
+    android:paddingTop="25dp"
+    android:id="@+id/scroll"
+    android:background="@drawable/login_gradient"
+    >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:id="@+id/login_head"
+            android:fontFamily="@font/creteround"
+            android:textSize="40sp"
+            android:layout_above="@id/emailLayout"
+            android:textColor=" #f39c12 "
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/emailLayout"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_above="@id/passLayout"
+            app:errorEnabled="true"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:hint="Email-Id"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:id="@+id/emailid"
+                android:inputType="textEmailAddress"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_height="wrap_content"
+            android:id="@+id/passLayout"
+            android:layout_width="match_parent"
+            app:passwordToggleEnabled="true"
+            android:layout_above="@id/radioGroup_type_person"
+            android:textColorHint="@color/colorPrimary"
+            app:passwordToggleTint="@color/colorPrimary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:hint="Password"
+                android:id="@+id/password"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup_type_person"
+            android:orientation="horizontal"
+            android:layout_above="@id/login_press">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salesperson"
+                android:layout_weight="1"
+                android:textSize="20sp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manager"
+                android:layout_weight="1"
+                android:textSize="20sp"/>
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Login"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="#ff9e00"
+            android:textSize="26sp"
+            android:id="@+id/login_press"
+            android:layout_marginTop="15dp"
+            android:layout_above="@id/linear1"
+            android:layout_marginBottom="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/linear1"
+            android:gravity="bottom"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_reset_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@null"
+                android:text="Forgot password?"
+                android:textAllCaps="false"
+                android:textColor="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Not a member yet? "
+                android:textColor="#fff"
+                android:textSize="18sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign up as a Manager"
+                android:layout_marginTop="15sp"
+                android:textColor="#ff9e00"
+                android:linksClickable="true"
+                android:id="@+id/Manager"
+                android:textSize="20sp"
+                android:gravity="center_horizontal"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign up as a Salesperson"
+                android:textSize="20sp"
+                android:layout_marginTop="5sp"
+                android:id="@+id/salesperson"
+                android:textColor="#ff9e00"
+                android:linksClickable="true"
+                android:gravity="center_horizontal"
+                />
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/progress_bar"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+</RelativeLayout>
