@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/colorPrimary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_margin="1dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="Samsung S9"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/profitText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:layout_marginTop="8dp"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:id="@+id/profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total profit: ₹"
+                android:layout_toLeftOf="@id/profitText"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/colorPrimaryDarkComp"
+            android:progress="43"
+            android:max="100"
+            android:indeterminate="false"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/items_sold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Items sold: "
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/items_sold_text"
+                android:id="@+id/items_sold"
+                android:text="20"
+                android:textSize="18sp"
+                android:textColor="#fff"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/remaining_items_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:layout_alignParentRight="true"
+                android:textSize="18sp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/remaining_items"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remaining: "
+                android:textStyle="bold"
+                android:layout_toLeftOf="@id/remaining_items_text"
+                android:textSize="18sp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
